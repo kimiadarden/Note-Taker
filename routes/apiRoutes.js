@@ -33,7 +33,17 @@ module.exports= function(app){
 //deleting a note:
     app.delete("/api/notes/:id", function(req, res) {
         let selectedNote = parseInt(req.params.id);
+      
+        for (let i = 0; i < noteContents.length; i++) {
+            if (selectedNote === noteContents[i].id) {
+                noteContents.splice(i,1);
+                
+                let noteJSON = JSON.stringify(noteContents, null, 2);
 
+        
+        
+            }        
+        }
 
 
 
