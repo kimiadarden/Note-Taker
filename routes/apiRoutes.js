@@ -40,11 +40,13 @@ module.exports= function(app){
                 
                 let noteJSON = JSON.stringify(noteContents, null, 2);
 
-        
+                writeFileAsync("./db/noteContents.json", noteJSON).then(function() {
+                });   
         
             }        
         }
 
+        res.json(noteContents);
 
 
     });
