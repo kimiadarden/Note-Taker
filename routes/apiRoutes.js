@@ -11,5 +11,10 @@ module.exports= function(app){
         res.json(noteContents);
     });
 
+    app.post("/api/notes", function(req, res) {
+
+
+
+    }); 
 
 }
