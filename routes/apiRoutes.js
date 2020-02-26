@@ -21,6 +21,12 @@ module.exports= function(app){
         
         noteContents.push(addingNotes);
 
+        writeFileAsync("./db/noteContents.json", JSON.stringify(noteContents)).then(function() {
+        });
+
+        res.json(addingNotes);
+
+
     }); 
 
 }
