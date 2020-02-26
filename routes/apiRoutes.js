@@ -13,7 +13,13 @@ module.exports= function(app){
 
     app.post("/api/notes", function(req, res) {
 
+        let addingNotes = req.body;
 
+        let lastId = noteContents[noteContents.length - 1]["id"];
+        let newId = lastId + 1;
+        addingNotes["id"] = newId;
+        
+        noteContents.push(addingNotes);
 
     }); 
 
