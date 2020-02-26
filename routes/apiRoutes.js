@@ -29,4 +29,15 @@ module.exports= function(app){
 
     }); 
 
+
+//deleting a note:
+    app.delete("/api/notes/:id", function(req, res) {
+        let selectedNote = parseInt(req.params.id);
+
+
+
+
+    });
+
+
 }
